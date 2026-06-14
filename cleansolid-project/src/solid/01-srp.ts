@@ -39,8 +39,27 @@ class Mailer {
 
 class UserBloc {
 
+    constructor(
+        private userserivce: UserService,
+        private mailer: Mailer,
+        private subscriptionBloc: SubscriptionBloc
+    ){}
+
+    loadUser( id: number ) {
+        return this.userserivce.loadUser(id);
+    }
+
+    saveUser(user: User){
+        return this.userserivce.saveUser(user);
+    }
+
+    notifyUser(){
+        return this.mailer.sendEmail();
+    }
+
+    onAddSubscription(subscriptionId: number){
+        return this.subscriptionBloc.onAddSubscription(subscriptionId);
+    }
 
 }
-
-const userBloc = new UserBloc();
 
