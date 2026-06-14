@@ -6,14 +6,14 @@ interface User {
 
 class SubscriptionBloc {
 
-        onAddSubscription( subscriptionId: number ) {
+    onAddSubscription( subscriptionId: number ) {
         // Simula la gestión de suscripciones
         console.log('Agregando suscripción:', subscriptionId );
     }
 
 }
 
-class UserBloc {
+class UserService {
 
     loadUser( id: number ) {
         // Simula la carga de un usuario
@@ -24,6 +24,14 @@ class UserBloc {
         // Simula el guardado en base de datos
         console.log('Guardando en base de datos:', user );
     }
+
+}
+
+
+
+class UserBloc {
+
+
 
     notifyUser() {
         // Simula el envío de notificaciones
@@ -38,4 +46,3 @@ const userBloc = new UserBloc();
 userBloc.loadUser(10);
 userBloc.saveUser({ id: 10, name: 'Fernando' });
 userBloc.notifyUser();
-userBloc.onAddSubscription(1234);
