@@ -3,7 +3,16 @@ interface User {
     name: string;
 }
 
-// Esta clase viola el Principio de Responsabilidad Única (SRP)
+
+class SubscriptionBloc {
+
+        onAddSubscription( subscriptionId: number ) {
+        // Simula la gestión de suscripciones
+        console.log('Agregando suscripción:', subscriptionId );
+    }
+
+}
+
 class UserBloc {
 
     loadUser( id: number ) {
@@ -21,10 +30,6 @@ class UserBloc {
         console.log('Enviando correo a los usuarios');
     }
 
-    onAddSubscription( subscriptionId: number ) {
-        // Simula la gestión de suscripciones
-        console.log('Agregando suscripción:', subscriptionId );
-    }
 
 }
 
