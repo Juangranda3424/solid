@@ -28,21 +28,19 @@ class UserService {
 }
 
 
+class Mailer {
 
-class UserBloc {
-
-
-
-    notifyUser() {
+    sendEmail(){
         // Simula el envío de notificaciones
         console.log('Enviando correo a los usuarios');
     }
+}
+
+
+class UserBloc {
 
 
 }
 
 const userBloc = new UserBloc();
 
-userBloc.loadUser(10);
-userBloc.saveUser({ id: 10, name: 'Fernando' });
-userBloc.notifyUser();
